@@ -51,23 +51,21 @@
         app:progresFailDrawable="@drawable/ic_error"
         app:progresSuccDrawable="@drawable/ic_checked"/>
 
+
+
     <com.example.nodeprogress.NodeProgress
         android:id="@+id/mp_4"
         android:layout_below="@+id/mp_3"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:nodesNum="6"
+        android:layout_height="70dp"
         app:currNodeState="0"
-        app:currNodeNO="2"
         app:nodeRadius="5dp"
-        app:processingLineColor="#FF00FF"
-        app:progressingDrawable="@drawable/ic_completed"
-        app:unprogressingDrawable="@drawable/ic_round_ddd"
-        app:progresFailDrawable="@drawable/ic_error"
-        app:progresSuccDrawable="@drawable/ic_checked"/>
-
-
+        app:processingLineColor="#7B68EE"
+        app:progressingDrawable="@drawable/circle_red"
+        app:unprogressingDrawable="@drawable/circle_gray"
+        app:progresFailDrawable="@drawable/circle_red"
+        app:progresSuccDrawable="@drawable/circle_red"/>
 
     <com.example.nodeprogress.CircleView
         android:layout_below="@+id/mp_4"
