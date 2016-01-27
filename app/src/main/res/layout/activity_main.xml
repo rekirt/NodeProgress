@@ -51,6 +51,8 @@
         app:progresFailDrawable="@drawable/ic_error"
         app:progresSuccDrawable="@drawable/ic_checked"/>
 
+
+
     <com.example.nodeprogress.NodeProgress
         android:id="@+id/mp_4"
         android:layout_below="@+id/mp_3"
@@ -67,8 +69,6 @@
         app:unprogressingDrawable="@drawable/circle_default"
         app:progresFailDrawable="@drawable/circle_slivery"
         app:progresSuccDrawable="@drawable/circle_slivery"/>
-
-
 
     <com.example.nodeprogress.CircleView
         android:layout_below="@+id/mp_4"

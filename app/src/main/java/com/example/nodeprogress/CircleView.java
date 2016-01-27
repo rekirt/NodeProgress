@@ -22,6 +22,7 @@ public class CircleView extends View {
 
     private void init() {
         mPaint = new Paint();;
+
     }
 
     public CircleView(Context context, AttributeSet attrs) {
