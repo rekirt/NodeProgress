@@ -5,7 +5,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainActivity"
-    xmlns:app="http://schemas.android.com/apk/res/com.example.nodeprogress">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.example.nodeprogress.MutiProgress
         android:id="@+id/mp_1"
@@ -56,16 +56,17 @@
         android:layout_below="@+id/mp_3"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         app:nodesNum="6"
         app:currNodeState="0"
         app:currNodeNO="2"
-        app:nodeRadius="5dp"
+        app:nodeRadius="12dp"
+        app:textSize="10sp"
         app:processingLineColor="#FF00FF"
-        app:progressingDrawable="@drawable/ic_completed"
-        app:unprogressingDrawable="@drawable/ic_round_ddd"
-        app:progresFailDrawable="@drawable/ic_error"
-        app:progresSuccDrawable="@drawable/ic_checked"/>
+        app:progressingDrawable="@drawable/circle_gold"
+        app:unprogressingDrawable="@drawable/circle_default"
+        app:progresFailDrawable="@drawable/circle_slivery"
+        app:progresSuccDrawable="@drawable/circle_slivery"/>
 
 
 
@@ -76,6 +77,12 @@
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         ></com.example.nodeprogress.CircleView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"/>
 
 
 </RelativeLayout>
