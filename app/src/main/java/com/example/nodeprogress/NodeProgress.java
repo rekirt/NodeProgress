@@ -19,7 +19,7 @@ import android.view.View;
 import java.util.ArrayList;
 
 //http://www.mamicode.com/info-detail-1017561.html
-
+//lc修改
 public class NodeProgress extends View{
 
 	private float textSize;//字体大小
