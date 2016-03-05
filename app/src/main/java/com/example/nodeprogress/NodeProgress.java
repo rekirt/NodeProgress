@@ -19,10 +19,9 @@ import android.view.View;
 import java.util.ArrayList;
 
 //http://www.mamicode.com/info-detail-1017561.html
-
+//lc修改
 public class NodeProgress extends View{
 
-	private int nodesNum ;
 	private float textSize;//字体大小
 	private int nodeCount;//节点个数
 	private int nodeRadius;//节点半径
@@ -53,7 +52,8 @@ public class NodeProgress extends View{
 		super(context, attrs, defStyleAttr);
 		mContext = context;
 		TypedArray mTypedArray = context.obtainStyledAttributes(attrs,R.styleable.MutiProgress);
-		nodesNum = mTypedArray.getInteger(R.styleable.MutiProgress_nodesNum, 1);
+		nodeCount = mTypedArray.getInteger(R.styleable.MutiProgress_nodesNum, 6);
+		currNodeNO = mTypedArray.getInt(R.styleable.MutiProgress_currNodeNO,1);
 		nodeRadius = mTypedArray.getDimensionPixelSize(R.styleable.MutiProgress_nodeRadius, 10);
 		textSize = mTypedArray.getDimension(R.styleable.MutiProgress_textSize,20);
 		progressingDrawable = mTypedArray.getDrawable(R.styleable.MutiProgress_progressingDrawable);
@@ -137,7 +137,7 @@ public class NodeProgress extends View{
 		mPaint.setStrokeCap(Paint.Cap.ROUND);//设置笔触的风格
 		mCanvas = new Canvas(mBitmap);
 		nodes = new ArrayList<Node>();
-		float nodeWidth = ((float)mWidth)/(nodesNum+1);
+		float nodeWidth = ((float)mWidth)/(nodeCount+1);
 		for(int i=0;i< nodeCount;i++)
 		{
 			Node node = new Node();
@@ -229,9 +229,6 @@ public class NodeProgress extends View{
 	{
 		Paint bgPaint = new Paint();
 		bgPaint.setColor(Color.parseColor("#FFFFFF"));
-		mCanvas.drawRect(0, 0, mWidth, mHeight, bgPaint);
-		mPaint.setStrokeWidth(nodeRadius/2);
-		mCanvas.drawLine(nodeRadius, mHeight/2, nodes.get(currNodeNO).mPoint.x + nodeRadius, nodes.get(currNodeNO).mPoint.y + nodeRadius, mPaint);  //�߶�2��ȥ��nodeRadius
 		mCanvas.drawRect(0, 0, mWidth, mHeight, bgPaint);//画背景色
 		mPaint.setStrokeWidth(nodeRadius / 2);//设置画笔的粗细
 		mPaint.setColor(Color.parseColor("#dddddd"));
